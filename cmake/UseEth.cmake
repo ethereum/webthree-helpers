@@ -17,7 +17,7 @@ function(eth_apply TARGET REQUIRED SUBMODULE)
 	endif()
 
 	if (${SUBMODULE} STREQUAL "ethash-cl")
-		if (ETHASHCL)
+		if (ETHASHCL OR Eth_ETHASH-CL_LIBRARIES)
 			if (OpenCL_FOUND)
 				eth_use(${TARGET} ${REQUIRED} Eth::ethash)
 				target_include_directories(${TARGET} SYSTEM PUBLIC ${OpenCL_INCLUDE_DIRS})
