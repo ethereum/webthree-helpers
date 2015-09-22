@@ -92,6 +92,10 @@ function print_help {
 	echo "    --all                     Will clone all repositories instead of only the ones that depend on the requested project"
 }
 
+echo "--------------------------------------------------"
+echo ">>>>>>>>>>> YES WE ARE RUNNING THE PR CODE <<<<<<<"
+echo "--------------------------------------------------"
+
 for arg in ${@:1}
 do
 	if [[ ${REQUESTED_ARG} != "" ]]; then
