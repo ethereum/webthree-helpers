@@ -17,6 +17,9 @@ while [ -h "$FILE_SOURCE" ]; do
 done
 SCRIPT_DIR="$( cd -P "$( dirname "$FILE_SOURCE" )" && pwd )"
 
+
+
+
 # Now that we got the directory, source some common functionality
 source "${SCRIPT_DIR}/ethbuildcommon.sh"
 
