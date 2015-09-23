@@ -6,6 +6,9 @@
 # in the usage string.
 
 
+
+
+
 # Get SCRIPT_DIR, the directory the script is located even if there are symlinks involved
 FILE_SOURCE="${BASH_SOURCE[0]}"
 # resolve $FILE_SOURCE until the file is no longer a symlink
