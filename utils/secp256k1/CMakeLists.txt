@@ -1,8 +1,10 @@
 
-file(GLOB HEADERS "*.h")
+file(GLOB HEADERS "src/*.h")
 
-add_library(secp256k1 secp256k1.c include/secp256k1.h ${HEADERS})
+add_library(secp256k1 ext.c include/secp256k1.h include/ext.h ${HEADERS})
 target_compile_definitions(secp256k1 INTERFACE ETH_HAVE_SECP256K1 PRIVATE HAVE_CONFIG_H)
+target_include_directories(secp256k1 PUBLIC .)
+target_include_directories(secp256k1 PUBLIC src)
 
 if (NOT MSVC)
 	eth_use(secp256k1 REQUIRED Gmp)
