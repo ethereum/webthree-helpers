@@ -5,6 +5,9 @@
 
 #define LIBSECP256K1_CONFIG_H
 
+#define ENABLE_MODULE_RECOVERY 1
+#define ENABLE_MODULE_ECDH 1
+
 /* Define if building universal (internal helper macro) */
 /* #undef AC_APPLE_UNIVERSAL_BUILD */
 
