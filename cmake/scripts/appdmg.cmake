@@ -6,6 +6,7 @@ endif()
 string(REPLACE "/Contents/MacOS" "" ETH_MIX_APP "${ETH_MIX_APP}")
 string(REPLACE "/Contents/MacOS" "" ETH_ALETHZERO_APP "${ETH_ALETHZERO_APP}")
 string(REPLACE "/Contents/MacOS" "" ETH_ALETHONE_APP "${ETH_ALETHONE_APP}")
+string(REPLACE "/Contents/MacOS" "" ETH_ETH_APP "${ETH_ETH_APP}")
 
 set(OUTFILE "${ETH_BUILD_DIR}/appdmg.json")
 

@@ -220,6 +220,7 @@ macro(eth_appdmg)
 			-DAPP_DMG_ICON="${CMAKE_CURRENT_SOURCE_DIR}/res/mac/alethzero.icns"
 			-DAPP_DMG_BACKGROUND="${CMAKE_CURRENT_SOURCE_DIR}/res/mac/install-folder-bg@2x.png"
 			-DETH_BUILD_DIR="${CMAKE_BINARY_DIR}"
+			-DETH_ETH_APP="$<TARGET_FILE_DIR:eth>"
 			-DETH_ALETHZERO_APP="$<TARGET_FILE_DIR:AlethZero>"
 			-DETH_ALETHONE_APP="$<TARGET_FILE_DIR:AlethOne>"
 			-DETH_MIX_APP="$<TARGET_FILE_DIR:Mix>"
