@@ -6,6 +6,9 @@
 # in the usage string.
 
 
+
+
+
 # Get SCRIPT_DIR, the directory the script is located even if there are symlinks involved
 FILE_SOURCE="${BASH_SOURCE[0]}"
 # resolve $FILE_SOURCE until the file is no longer a symlink
@@ -16,6 +19,14 @@ while [ -h "$FILE_SOURCE" ]; do
 	[[ $FILE_SOURCE != /* ]] && FILE_SOURCE="$SCRIPT_DIR/$FILE_SOURCE"
 done
 SCRIPT_DIR="$( cd -P "$( dirname "$FILE_SOURCE" )" && pwd )"
+
+
+
+
+
+
+
+
 
 # Now that we got the directory, source some common functionality
 source "${SCRIPT_DIR}/ethbuildcommon.sh"
@@ -165,6 +176,12 @@ function print_help {
 	echo "    --build-pr HEX            Will make sure that the main repository for the project has the commit of a particular PR checked out. You can also give the value of none to disable this argument."
 	echo "    --all                     In addition to cloning the repositores needed to build this project, also clone all projects that depend on it"
 }
+
+
+
+echo "--------------------------------------------------"
+echo ">>>>>>>>>>> YES WE ARE RUNNING THE PR CODE <<<<<<<"
+echo "--------------------------------------------------"
 
 for arg in ${@:1}
 do
