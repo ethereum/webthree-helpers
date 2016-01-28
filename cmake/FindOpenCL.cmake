@@ -44,7 +44,7 @@ function(_FIND_OPENCL_VERSION)
     if(APPLE)
       CHECK_SYMBOL_EXISTS(
         CL_VERSION_${VERSION}
-        "${OpenCL_INCLUDE_DIR}/OpenCL/cl.h"
+        "OpenCL/cl.h"
         OPENCL_VERSION_${VERSION})
     else()
       CHECK_SYMBOL_EXISTS(
