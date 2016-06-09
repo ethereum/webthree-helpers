@@ -19,6 +19,7 @@ if (DEFINED MSVC)
 
 	if (CMAKE_CXX_COMPILER_VERSION VERSION_LESS 19.0.0)
 		set (ETH_DEPENDENCY_INSTALL_DIR "${CMAKE_CURRENT_LIST_DIR}/../extdep/install/windows/x64")
+		message(STATUS "ETH_DEPENDENCY_INSTALL_DIR = ${ETH_DEPENDENCY_INSTALL_DIR}")
 	else()
 		get_filename_component(DEPS_DIR "${CMAKE_CURRENT_LIST_DIR}/../deps/install" ABSOLUTE)
 		set(ETH_DEPENDENCY_INSTALL_DIR
@@ -26,8 +27,10 @@ if (DEFINED MSVC)
 			"${DEPS_DIR}/win64"					# New location for deps.
 			"${DEPS_DIR}/win64/Release/share"	# LLVM shared cmake files.
 		)
+		message(STATUS "ETH_DEPENDENCY_INSTALL_DIR = ${ETH_DEPENDENCY_INSTALL_DIR}")
 	endif()
 	set (CMAKE_PREFIX_PATH ${ETH_DEPENDENCY_INSTALL_DIR} ${CMAKE_PREFIX_PATH})
+	message(STATUS "CMAKE_PREFIX_PATH = ${CMAKE_PREFIX_PATH}")
 
 	# Qt5 requires opengl
 	# TODO it windows SDK is NOT FOUND, throw ERROR
