@@ -125,7 +125,7 @@ if [[ $OSTYPE == "cygwin" ]]; then
 		echo "ETHBINARIES - ERROR: Failed to source ethwindowsenv.sh.";
 		exit 1
 	fi
-	cmake .. -G "Visual Studio 12 2013 Win64"
+	cmake .. -G "Visual Studio 14 2015 Win64"
 	if [[ $? -ne 0 ]]; then
 	echo "ETHBINARIES - ERROR: cmake configure phase in Windows failed.";
 	exit 1

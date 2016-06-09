@@ -218,7 +218,7 @@ do
 	if [[ $OSTYPE == "cygwin" ]]; then
 		# For Windows we gotta emulate the Visual studio environment
 		source "${SCRIPT_DIR}/ethwindowsenv.sh"
-		cmake .. -G "Visual Studio 12 2013 Win64"
+		cmake .. -G "Visual Studio 14 2015 Win64"
 		if [[ $? -ne 0 ]]; then
 			echo "ETHBUILD - ERROR: cmake configure phase for repository \"$repository\" failed.";
 			exit 1
