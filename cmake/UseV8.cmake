@@ -1,6 +1,6 @@
 function(eth_apply TARGET REQUIRED)
 	# homebrew install directories for few of our dependencies
-	set (CMAKE_PREFIX_PATH "/usr/local/opt/v8-315" ${CMAKE_PREFIX_PATH})
+	set (CMAKE_PREFIX_PATH "/usr/include/nodejs/deps/v8" ${CMAKE_PREFIX_PATH})
 	find_package (v8 QUIET)
 	eth_show_dependency(V8 c8)
 
